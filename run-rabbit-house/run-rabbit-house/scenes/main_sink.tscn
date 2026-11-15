@@ -88,7 +88,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_acsfn")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ccaj"]
-size = Vector3(0.9934387, 0.44699097, 0.7612915)
+size = Vector3(1.0396881, 0.44699097, 0.8435364)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gg1en"]
 _surfaces = [{
@@ -125,10 +125,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gg1en")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_50l4w"]
-size = Vector3(0.34555054, 0.33493805, 0.65031815)
+size = Vector3(0.3773651, 0.33493805, 0.67562294)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d1vow"]
-size = Vector3(0.9748535, 0.81030273, 1.96188)
+size = Vector3(0.93359375, 0.81030273, 1.96188)
 
 [sub_resource type="Animation" id="Animation_le8dh"]
 length = 0.001
@@ -299,7 +299,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wv0gt"]
-size = Vector3(0.9769287, 0.8686218, 1.927124)
+size = Vector3(0.90753174, 0.8686218, 1.927124)
 
 [node name="mainSink" type="StaticBody3D" unique_id=1722723286 node_paths=PackedStringArray("interaction_areas")]
 script = ExtResource("1_mqafj")
@@ -324,7 +324,7 @@ metadata/extras = {
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bathroomSink/left/Area3D" unique_id=1118831152]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42131042, 0.004470825, -0.37398922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39818573, 0.004470825, -0.41511166)
 shape = SubResource("BoxShape3D_2ccaj")
 
 [node name="right" type="MeshInstance3D" parent="bathroomSink" unique_id=234084313]
@@ -338,11 +338,11 @@ metadata/extras = {
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="bathroomSink/right/Area3D" unique_id=342228594]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05626285, 0.06738663, 0.40417194)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040355563, 0.06738663, 0.41682434)
 shape = SubResource("BoxShape3D_50l4w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2144393416]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051452756, 0.538208, -0.00061428547)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030822873, 0.538208, -0.00061428547)
 shape = SubResource("BoxShape3D_d1vow")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=93840127]
@@ -351,5 +351,5 @@ libraries/ = SubResource("AnimationLibrary_spoh3")
 [node name="Area3D" type="Area3D" parent="." unique_id=1607814161]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1651659630]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07761955, 0.59584045, 0.012268066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.042921066, 0.59584045, 0.012268066)
 shape = SubResource("BoxShape3D_wv0gt")

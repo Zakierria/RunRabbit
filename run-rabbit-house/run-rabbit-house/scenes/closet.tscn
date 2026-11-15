@@ -88,7 +88,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0t4rd")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bewde"]
-size = Vector3(0.72753906, 2.256836, 0.6216583)
+size = Vector3(0.8066406, 2.256836, 0.19628906)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ysmtx"]
 _surfaces = [{
@@ -125,7 +125,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ysmtx")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d0ker"]
-size = Vector3(0.822876, 2.2894287, 0.5913696)
+size = Vector3(0.79315186, 2.2894287, 0.12886047)
 
 [sub_resource type="Animation" id="Animation_bewde"]
 length = 0.001
@@ -296,10 +296,13 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wvv42"]
-size = Vector3(1.7276611, 2.406845, 0.50024414)
+size = Vector3(1.7276611, 2.406845, 0.0826416)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b253r"]
 size = Vector3(1.7369537, 2.4470215, 0.49951172)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uj11n"]
+size = Vector3(1.6862183, 1.4968262, 0.41125488)
 
 [node name="closet" type="StaticBody3D" unique_id=2105931409 node_paths=PackedStringArray("interaction_areas")]
 script = ExtResource("1_uj11n")
@@ -324,7 +327,7 @@ metadata/extras = {
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/left/Area3D" unique_id=2122350402]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33238614, 0.041365862, -0.1949156)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29283538, 0.041365862, 0.01776892)
 shape = SubResource("BoxShape3D_bewde")
 
 [node name="right" type="MeshInstance3D" parent="cabinetBig" unique_id=756520136]
@@ -338,14 +341,14 @@ metadata/extras = {
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/right/Area3D" unique_id=639632746]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33807373, 0.029846191, -0.19320601)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35293582, 0.029846191, 0.038048565)
 shape = SubResource("BoxShape3D_d0ker")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1598411934]
 libraries/ = SubResource("AnimationLibrary_cg8se")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1157264329]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013959169, 1.3065468, 0.033081055)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013959169, 1.3065468, -0.17572021)
 shape = SubResource("BoxShape3D_wvv42")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1862757918]
@@ -353,3 +356,19 @@ shape = SubResource("BoxShape3D_wvv42")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=88743072]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019065857, 1.288208, 0.018066406)
 shape = SubResource("BoxShape3D_b253r")
+
+[node name="HidingArea" type="Area3D" parent="." unique_id=697853613]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HidingArea" unique_id=888358215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.090667725, 0.711792, -0.04425049)
+visible = false
+shape = SubResource("BoxShape3D_uj11n")
+
+[node name="HidePosition" type="Marker3D" parent="." unique_id=504197511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46079004, 0.5599838, -0.06965726)
+visible = false
+
+[node name="ExitPosition" type="Marker3D" parent="." unique_id=1507227110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85782504, 0.93940496)
+visible = false

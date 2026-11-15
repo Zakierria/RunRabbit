@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://qlfyl5mwgusj"]
+
+[ext_resource type="PackedScene" uid="uid://c3h2c5xm2yt81" path="res://trenchbroom/assets/bedrooms/bed3.glb" id="1_xqjo8"]
+[ext_resource type="Script" uid="uid://64yplbe8k83a" path="res://scripts/hididng_spot.gd" id="2_fqty4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c32mu"]
+size = Vector3(2.6154785, 0.28112793, 1.3190918)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_akt7f"]
+size = Vector3(2.7675629, 0.36663818, 1.6138)
+
+[node name="bed" type="StaticBody3D" unique_id=1940286636]
+script = ExtResource("2_fqty4")
+crouch_when_hidden = true
+
+[node name="bed32" parent="." unique_id=560250941 instance=ExtResource("1_xqjo8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11848265, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=595526154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.057006836, 0.35943604, 0.018676758)
+shape = SubResource("BoxShape3D_c32mu")
+
+[node name="HidingArea" type="Area3D" parent="." unique_id=97567461]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HidingArea" unique_id=1098493508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02783966, 0.052176237, -0.016738892)
+shape = SubResource("BoxShape3D_akt7f")
+
+[node name="HidePosition" type="Marker3D" parent="." unique_id=33061060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020079195, -0.22021703, -0.10493904)
+
+[node name="ExitPosition" type="Marker3D" parent="." unique_id=1358323950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06507849, -0.9889449)

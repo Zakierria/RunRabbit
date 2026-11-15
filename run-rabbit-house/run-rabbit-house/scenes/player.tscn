@@ -7,6 +7,7 @@ radius = 0.35546875
 height = 1.8325195
 
 [node name="player" type="CharacterBody3D" unique_id=99303024]
+collision_layer = 7
 collision_mask = 3
 floor_stop_on_slope = false
 script = ExtResource("1_4flbx")
@@ -23,7 +24,39 @@ fov = 84.57356
 
 [node name="RayCast3D" type="RayCast3D" parent="head" unique_id=869936989]
 exclude_parent = false
-target_position = Vector3(0, -1, -2.5)
+target_position = Vector3(0, 0, -3)
 collision_mask = 2
 collide_with_areas = true
-collide_with_bodies = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1985676915]
+
+[node name="InteractionMessage" type="Label" parent="CanvasLayer" unique_id=1877791016]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -91.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "You Need Room Key"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=2110719081]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Crosshair" type="Label" parent="CanvasLayer/CenterContainer" unique_id=1497360030]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -94,7 +94,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7gius")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gk71u"]
-size = Vector3(1.5516624, 1.4316406, 1.1885376)
+size = Vector3(1.4320812, 1.4316406, 1.2307863)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ypn12"]
 _surfaces = [{
@@ -131,10 +131,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ypn12")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6ofhc"]
-size = Vector3(1.4738464, 0.8857422, 1.2675781)
+size = Vector3(1.4738464, 0.8857422, 1.1905518)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x7sr2"]
-size = Vector3(1.4232311, 2.3579464, 1.239624)
+size = Vector3(1.5724554, 2.3579464, 1.239624)
 
 [sub_resource type="Animation" id="Animation_2t0b2"]
 length = 0.001
@@ -305,9 +305,10 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_psch2"]
-size = Vector3(2.1890564, 2.302124, 1.1467896)
+size = Vector3(1.7247543, 2.7417145, 1.0363312)
 
 [node name="fridge" type="StaticBody3D" unique_id=120531363]
+transform = Transform3D(0.9999989, 0, -0.0015183613, 0, 1, 0, 0.0015183613, 0, 0.9999989, 0, 0, 0)
 script = ExtResource("1_gk71u")
 
 [node name="fridge" type="MeshInstance3D" parent="." unique_id=1401550837]
@@ -325,9 +326,10 @@ metadata/extras = {
 
 [node name="Area3D" type="Area3D" parent="fridge/bottom_door" unique_id=44209021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.94968486, 0.5203549, 0.42128038)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fridge/bottom_door/Area3D" unique_id=994858065]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23885298, -0.4607846, -0.83616686)
+transform = Transform3D(1.0000042, 0, 2.6077032e-08, 0, 1, 0, -2.6077032e-08, 0, 1.0000042, 0.29864365, -0.4607846, -0.73772335)
 shape = SubResource("BoxShape3D_gk71u")
 
 [node name="top_door" type="MeshInstance3D" parent="fridge" unique_id=318133586]
@@ -338,13 +340,14 @@ metadata/extras = {
 }
 
 [node name="Area3D" type="Area3D" parent="fridge/top_door" unique_id=2055276710]
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fridge/top_door/Area3D" unique_id=1395688126]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7185985, 0.103027344, -0.37109375)
+transform = Transform3D(1.0000024, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 1.0000024, -0.71859866, 0.103027344, -0.35955805)
 shape = SubResource("BoxShape3D_6ofhc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1662230251]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038772702, 1.2741038, 0.07085155)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03583944, 1.2741038, 0.07085155)
 shape = SubResource("BoxShape3D_x7sr2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1766876196]
@@ -353,5 +356,5 @@ libraries/ = SubResource("AnimationLibrary_wjbh6")
 [node name="Area3D" type="Area3D" parent="." unique_id=1345302611]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=636952133]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03199768, 1.2617798, 0.034454346)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.043758392, 1.1783676, 0.01930052)
 shape = SubResource("BoxShape3D_psch2")

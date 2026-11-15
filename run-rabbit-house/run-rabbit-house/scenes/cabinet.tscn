@@ -86,7 +86,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qlwwd")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pkbbd"]
-size = Vector3(0.91552734, 0.96894836, 0.3973236)
+size = Vector3(0.99279785, 0.96894836, 0.3973236)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x70vl"]
 _surfaces = [{
@@ -126,7 +126,7 @@ shadow_mesh = SubResource("ArrayMesh_x70vl")
 size = Vector3(0.9038086, 0.94226074, 0.4349823)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_igc2x"]
-size = Vector3(1.00354, 1.1122437, 0.956604)
+size = Vector3(0.9324341, 1.1122437, 0.956604)
 
 [sub_resource type="Animation" id="Animation_ssam1"]
 length = 0.001
@@ -297,7 +297,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fvo7w"]
-size = Vector3(0.98394775, 1.0827026, 0.9496803)
+size = Vector3(0.9520569, 1.0827026, 0.9496803)
 
 [node name="cabinet" type="StaticBody3D" unique_id=1225076995 node_paths=PackedStringArray("interaction_areas")]
 script = ExtResource("1_c6sfa")
@@ -323,7 +323,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4735149)
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetLow/cabinet_right/Area3D" unique_id=1673002673]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24729627, 0.04274845, 0.70454144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20866102, 0.04274845, 0.70454144)
 shape = SubResource("BoxShape3D_pkbbd")
 
 [node name="cabinet_left" type="MeshInstance3D" parent="cabinetLow" unique_id=1322018289]
@@ -342,7 +342,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24155045, 0.05218506, -0.7
 shape = SubResource("BoxShape3D_ssam1")
 
 [node name="cabinet_collision" type="CollisionShape3D" parent="." unique_id=930211762]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5210085, 0.5770606, -0.0038211048)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4854555, 0.5770606, -0.0038211048)
 shape = SubResource("BoxShape3D_igc2x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=187244973]
@@ -353,5 +353,5 @@ collision_layer = 0
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=384146727]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50607014, 0.53518677, 0.009851694)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4901247, 0.53518677, 0.009851694)
 shape = SubResource("BoxShape3D_fvo7w")
