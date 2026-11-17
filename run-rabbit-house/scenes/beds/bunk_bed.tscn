@@ -81,7 +81,7 @@ visible = false
 shape = SubResource("BoxShape3D_d18x2")
 
 [node name="HidePosition" type="Marker3D" parent="." unique_id=353257827]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10474542, -0.09643254, 0.06314835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06344262, 0.17259544, 0.06314835)
 
 [node name="ExitPosition" type="Marker3D" parent="." unique_id=1459821082]
 transform = Transform3D(0.9999965, 0.0026419994, -8.603624e-05, -0.0026420185, 0.9999965, -0.00022417026, 8.5444066e-05, 0.00022439663, 1, 0.16777384, 0.2989295, -1.2972808)

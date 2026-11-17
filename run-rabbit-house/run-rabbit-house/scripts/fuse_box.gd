@@ -15,7 +15,7 @@ func _ready() -> void:
 			
 			# keep lights on and dimmed
 			light.visible = true
-			light.light_energy = 0.35
+			light.light_energy = 0.20
 			
 			# giving lights a color before power
 			light.light_color = Color("715229ff")

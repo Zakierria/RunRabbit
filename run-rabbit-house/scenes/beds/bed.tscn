@@ -27,7 +27,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02783966, 0.052176237, -0.
 shape = SubResource("BoxShape3D_akt7f")
 
 [node name="HidePosition" type="Marker3D" parent="." unique_id=33061060]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020079195, -0.22021703, -0.10493904)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8304445, -0.19928493, 0.03626287)
 
 [node name="ExitPosition" type="Marker3D" parent="." unique_id=1358323950]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06507849, -0.9889449)
