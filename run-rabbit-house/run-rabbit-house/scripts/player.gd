@@ -143,14 +143,14 @@ func enter_hiding() -> void:
 	is_hiding = true
 	velocity = Vector3.ZERO
 
-	# Move the player to the hiding marker
+	# move the player to the hiding marker
 	global_position = current_hiding_spot.get_hide_position()
 
-	# Lower the camera/head while hiding
+	# lower the camera/head while hiding
 	if current_hiding_spot.should_crouch_when_hidden():
 		head.position.y = standing_head_y - hide_head_offset
 
-	# Disable player collision while hiding
+	# disable player collision while hiding
 	if player_collision != null:
 		player_collision.set_deferred("disabled", true)
 	else:
@@ -169,17 +169,17 @@ func exit_hiding() -> void:
 	if current_hiding_spot == null:
 		return
 
-	# Move the player outside the hiding spot
+	# move the player outside the hiding spot
 	global_position = current_hiding_spot.get_exit_position()
 	velocity = Vector3.ZERO
 
-	# Restore player collision
+	# restore player collision
 	if player_collision != null:
 		player_collision.set_deferred("disabled", false)
 	else:
 		push_error("Player CollisionShape3D was not found")
 
-	# Restore normal head height
+	# restore normal head height
 	head.position.y = standing_head_y
 
 	is_hiding = false
@@ -191,7 +191,7 @@ func exit_hiding() -> void:
 
 	print("You stopped hiding.")
 
-# FIND INTERACTIVE OBJECT
+#find interactive object
 
 func find_interactable(hit_node: Node) -> Node:
 	var target: Node = hit_node
@@ -205,7 +205,7 @@ func find_interactable(hit_node: Node) -> Node:
 
 	return null
 
-# INPUT AND INTERACTIONS
+# input and interactions 
 
 func _unhandled_input(event: InputEvent) -> void:
 	
@@ -219,12 +219,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 
-	# Detect when E is released.
+	# detects when e is released
 	if event.is_action_released("interact"):
 		interact_waiting_for_release = false
 		return
 
-	# Only respond to a fresh E press.
+	# will only respond to a fresh e press
 	if event.is_action_pressed("interact") and not event.is_echo():
 
 		if interact_waiting_for_release or interaction_cooldown:
@@ -235,7 +235,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		get_viewport().set_input_as_handled()
 
-		# Prevent another interaction immediately afterward.
+		# prevents another interaction immediately afterward.
 		release_interaction_cooldown()
 
 		if is_hiding:
@@ -283,7 +283,7 @@ func interact_with_target() -> void:
 		target.interact(hit_node)
 
 
-# MOVEMENT
+# movement
 
 func _physics_process(delta: float) -> void:
 
@@ -340,7 +340,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-# ON-SCREEN INTERACTION MESSAGE
+# on screen interaction message
 
 func show_interaction_message(message: String) -> void:
 

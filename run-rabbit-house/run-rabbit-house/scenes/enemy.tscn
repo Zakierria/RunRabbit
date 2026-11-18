@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bjgtksys1d7o7"]
+
+[ext_resource type="Script" uid="uid://ddgmnernyfade" path="res://enemy.gd" id="1_md0e3"]
+[ext_resource type="PackedScene" uid="uid://dt4wm284xdpdq" path="res://models/old_man/Casual Style - Old Man.gltf" id="2_4ra3w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5uy6h"]
+height = 1.9360352
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1182376766]
+script = ExtResource("1_md0e3")
+
+[node name="Model" parent="." unique_id=1976707796 instance=ExtResource("2_4ra3w")]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=829246679]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1070852537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8991699, 0)
+shape = SubResource("CapsuleShape3D_5uy6h")
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="." unique_id=1964339612]

@@ -47,7 +47,7 @@ func _ready() -> void:
 	close_button.text = "Put Note Away"
 
 
-# Connects to your existing player interaction system.
+# connects to existing player interaction system.
 func interact_with_player(player: Node3D) -> void:
 
 	if note_open:

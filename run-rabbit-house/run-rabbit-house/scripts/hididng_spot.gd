@@ -19,11 +19,9 @@ func _on_body_entered(body: Node3D) -> void:
 		return
 		
 	#for debugging
-	print("entered hiding spot: ", get_path())
-	print("hide marker: ", hide_position.global_position)
-	
-	
-	
+	#print("entered hiding spot: ", get_path())
+	#print("hide marker: ", hide_position.global_position)
+
 	print("Player entered hiding area!!")
 	body.set_nearby_hiding_spot(self)
 	

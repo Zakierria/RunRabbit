@@ -6,14 +6,14 @@ extends StaticBody3D
 	false
 )
 
-# Assign one Area3D for every independently interactive part.
+# assigns one Area3D for every independently interactive part.
 @export var interaction_areas: Array[Area3D] = []
 
-# These arrays must follow the SAME order as interaction_areas.
+# arrays gotta follow the same name, make sure they match 
 @export var open_animations: Array[StringName] = []
 @export var close_animations: Array[StringName] = []
 
-# Tracks each individual part independently.
+# tracks each individual part independently
 var part_states: Array[bool] = []
 
 var is_animating := false
@@ -58,7 +58,7 @@ func interact(hit_node: Node = null) -> void:
 		else:
 			print("WARNING: An interaction area is empty.")
 
-	# Identify the exact Area3D that was hit.
+	#identfies the exact Area3D that was hit.
 	var part_index := find_part(hit_node)
 
 	if part_index == -1:
@@ -114,10 +114,10 @@ func find_part(hit_node: Node) -> int:
 
 	var current_node: Node = hit_node
 
-	# Search the hit node and its parents.
+	# search the hit node and its parents.
 	while current_node != null:
 
-		# Compare the hit node against every assigned Area3D.
+		#comapre the hit node against every assigned Area3D, just to make sure the node is reacting properly
 		for i in range(interaction_areas.size()):
 
 			var area := interaction_areas[i]

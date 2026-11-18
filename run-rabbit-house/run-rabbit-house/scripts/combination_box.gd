@@ -35,7 +35,7 @@ func _ready() -> void:
 	code_input.placeholder_text = "Enter combination"
 
 
-# Compatible with your existing player script.
+# makes sure it is compatible with player script
 func interact_with_player(player: Node3D) -> void:
 
 	if is_unlocked or puzzle_open:
@@ -101,7 +101,7 @@ func reveal_key() -> void:
 	print("A key was revealed inside the box!")
 
 
-# Disable or enable the key's collision shapes.
+# disable or enable the key's collision shapes.
 func set_key_collision(enabled: bool) -> void:
 
 	var collision_nodes = hidden_key.find_children(

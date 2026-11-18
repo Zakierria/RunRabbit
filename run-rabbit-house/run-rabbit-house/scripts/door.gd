@@ -15,13 +15,13 @@ var is_unlocked := false
 
 func interact_with_player(player) -> void:
 
-	# Check if this door requires a key
+	# check if this door requires a key
 	if requires_key and not is_unlocked:
 
-		# Check if the player has the required key
+		# check if the player has the required key
 		if not player.has_item(required_item):
 
-			# Show an on-screen message
+			# show an on-screen message
 			if player.has_method("show_interaction_message"):
 				if required_item == "front_door_key":
 					player.show_interaction_message("You need Front Door Key.")
@@ -32,11 +32,11 @@ func interact_with_player(player) -> void:
 
 			return
 
-		# Unlock the door
+		# unlock the door
 		is_unlocked = true
 		print("Door unlocked!")
 
-		# Only remove the key if this option is enabled
+		# only remove the key if this option is enabled, dont think they are activated tho 
 		if consume_key:
 			if player.has_method("remove_item"):
 				player.remove_item(required_item)
