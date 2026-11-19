@@ -1,0 +1,39 @@
+OS:	Windows 11 Version 25H2
+Qt:	6.10.3
+GL_VENDOR:	Intel
+GL_RENDERER:	Intel(R) UHD Graphics
+GL_VERSION:	4.6.0 - Build 32.0.101.7076
+TrenchBroom Version:	2026.2
+TrenchBroom Build:	v2026.2 Release Win64
+Reason:	3221225477
+Stack trace (most recent call first):
+#0  0x00007ff785a2e803 in tb::ui::`anonymous namespace'::TrenchBroomUnhandledExceptionFilter
+#1  0x00007ffb882bfaa2 in UnhandledExceptionFilter
+#2  0x00007ffb8b17f8fc in strncpy
+#3  0x00007ffb8b137732 in _C_specific_handler
+#4  0x00007ffb8b17ab3e in _chkstk
+#5  0x00007ffb8b0d6984 in RtlWow64GetCurrentMachine
+#6  0x00007ffb8b17a47d in KiUserExceptionDispatcher
+#7  0x00007ffa9322ecac in  ?? 
+#8  0x00007ffa934ce1e3 in RegisterProcTableCallback
+#9  0x00007ffa934ca3c9 in RegisterProcTableCallback
+#10 0x00007ffa934c96ae in RegisterProcTableCallback
+#11 0x00007ffa93d32234 in DumpRegistryKeyDefinitions
+#12 0x00007ffa934c985b in RegisterProcTableCallback
+#13 0x00007ffa934bc56c in RegisterProcTableCallback
+#14 0x00007ffa93201e35 in  ?? 
+#15 0x00007ffa940cb89c in DumpRegistryKeyDefinitions
+#16 0x00007ffa93201f39 in  ?? 
+#17 0x00007ffa934b9180 in RegisterProcTableCallback
+#18 0x00007ffa93202239 in  ?? 
+#19 0x00007ffa93493153 in RegisterProcTableCallback
+#20 0x00007ffa93493b82 in RegisterProcTableCallback
+#21 0x00007ffa93497d5f in RegisterProcTableCallback
+#22 0x00007ffa93675d72 in DumpRegistryKeyDefinitions
+#23 0x00007ffa9367a34d in DumpRegistryKeyDefinitions
+#24 0x00007ffa93651a3d in DumpRegistryKeyDefinitions
+#25 0x00007ffa93d2d222 in DumpRegistryKeyDefinitions
+#26 0x00007ffa93d2cd68 in DumpRegistryKeyDefinitions
+#27 0x00007ffa93d2e3c1 in DumpRegistryKeyDefinitions
+#28 0x00007ffb89f6dda6 in BaseThreadInitThunk
+#29 0x00007ffb8b0d9c5b in RtlUserThreadStart

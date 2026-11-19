@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://buqct2bstlx22"]
+
+[ext_resource type="PackedScene" uid="uid://cet86uamgxxk" path="res://trenchbroom/assets/furniture/couchSmall.glb" id="1_0r3qc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8xn6l"]
+size = Vector3(1.3211823, 1.0605469, 1.1951294)
+
+[node name="smallCouch" type="StaticBody3D" unique_id=2036579183]
+
+[node name="couchSmall2" parent="." unique_id=1411433504 instance=ExtResource("1_0r3qc")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2072101538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028953552, 0.5859375, 0.12081909)
+shape = SubResource("BoxShape3D_8xn6l")

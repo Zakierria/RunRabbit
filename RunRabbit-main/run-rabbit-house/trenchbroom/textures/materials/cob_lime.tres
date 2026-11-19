@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://0gbimjspbktx"]
+
+[ext_resource type="Texture2D" uid="uid://kpxgtjm3jscb" path="res://trenchbroom/textures/cob_lime.png" id="1_hi68l"]
+
+[resource]
+albedo_texture = ExtResource("1_hi68l")
+metallic_specular = 0.0
+texture_filter = 2

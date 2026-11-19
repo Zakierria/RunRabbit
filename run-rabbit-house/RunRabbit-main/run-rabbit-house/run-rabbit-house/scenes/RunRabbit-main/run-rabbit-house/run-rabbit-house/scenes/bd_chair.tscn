@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1it5iuhe85se"]
+
+[ext_resource type="PackedScene" uid="uid://bvggmgot7j35c" path="res://trenchbroom/assets/furniture/chair3.glb" id="1_duiip"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_duiip"]
+size = Vector3(0.6767273, 1.3913574, 0.6215515)
+
+[node name="bdChair" type="StaticBody3D" unique_id=1425580451]
+
+[node name="chair32" parent="." unique_id=1017913349 instance=ExtResource("1_duiip")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1590192229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00954169, 0.53723145, 0.005918741)
+shape = SubResource("BoxShape3D_duiip")

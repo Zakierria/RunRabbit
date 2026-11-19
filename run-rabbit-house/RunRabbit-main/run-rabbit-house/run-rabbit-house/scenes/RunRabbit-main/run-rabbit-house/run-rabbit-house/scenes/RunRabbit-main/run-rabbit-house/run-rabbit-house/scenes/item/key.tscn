@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c43g2tewyxnth"]
+
+[ext_resource type="Script" uid="uid://uhue6py4764y" path="res://scripts/pickup_item.gd" id="1_43tf2"]
+[ext_resource type="PackedScene" uid="uid://2p4gdcf2upy" path="res://scenes/item/antique key 3d model (2).glb" id="1_faj66"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_43tf2"]
+size = Vector3(0.3226242, 1.0163002, 0.3623047)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5lilg"]
+size = Vector3(0.36206055, 0.99142456, 0.31456757)
+
+[node name="garage_key" type="StaticBody3D" unique_id=665477445]
+collision_layer = 2
+script = ExtResource("1_43tf2")
+
+[node name="antique key 3d model (2)" parent="." unique_id=1168687192 instance=ExtResource("1_faj66")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=176432734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0010429919, 0.52254677, 0.057780445)
+shape = SubResource("BoxShape3D_43tf2")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=219577330]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=793136476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000418365, 0.503952, 0.019173026)
+shape = SubResource("BoxShape3D_5lilg")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mhk31bogi7dq"]
+
+[ext_resource type="Texture2D" uid="uid://csfg4u8cjlcyr" path="res://trenchbroom/textures/psx_house_f_wood_01.png" id="1_6iej3"]
+
+[resource]
+albedo_texture = ExtResource("1_6iej3")
+metallic_specular = 0.0
+texture_filter = 2

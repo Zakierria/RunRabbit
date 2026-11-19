@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://48no1oau2xfg"]
+
+[ext_resource type="Texture2D" uid="uid://55ftdagjq0uk" path="res://trenchbroom/textures/house/garage floor.png" id="1_qgae8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3t0k6"]
+albedo_texture = ExtResource("1_qgae8")
+
+[sub_resource type="BoxMesh" id="BoxMesh_uu34c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qgae8"]
+size = Vector3(9.862213, 2.6674805, 0.27923584)
+
+[node name="GarageDoor" type="StaticBody3D" unique_id=252750876]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=541156624]
+transform = Transform3D(11.105717, 0, 0, 0, 2.6170688, 0, 0, 0, 0.15, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_3t0k6")
+mesh = SubResource("BoxMesh_uu34c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1352319117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03981018, 0.04272461, 0.01651001)
+shape = SubResource("BoxShape3D_qgae8")

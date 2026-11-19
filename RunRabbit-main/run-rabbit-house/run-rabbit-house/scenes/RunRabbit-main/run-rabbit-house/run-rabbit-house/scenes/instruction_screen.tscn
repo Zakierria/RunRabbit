@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://xiuq6kudsete"]
+
+[ext_resource type="Script" uid="uid://cw5y6rlgt2g1b" path="res://scripts/introscreen.gd" id="1_r8sh0"]
+
+[node name="InstructionScreen" type="Control" unique_id=215144477]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+script = ExtResource("1_r8sh0")
+
+[node name="Background" type="ColorRect" parent="." unique_id=951496983]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17310482, 0.025812443, 0.011532465, 1)
+
+[node name="MainContainer" type="VBoxContainer" parent="Background" unique_id=982059853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+alignment = 1
+
+[node name="GameTitle" type="Label" parent="Background/MainContainer" unique_id=1773283767]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98120266, 0.9819339, 0.98826784, 1)
+theme_override_font_sizes/font_size = 52
+text = "Run Rabbit"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Background/MainContainer" unique_id=1540762633]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "If You Can "
+horizontal_alignment = 1
+
+[node name="ControlsTitle" type="Label" parent="Background/MainContainer" unique_id=903821017]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 28
+text = "How To Survive"
+uppercase = true
+
+[node name="ControlsList" type="VBoxContainer" parent="Background/MainContainer" unique_id=1073459513]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="MoveRow" type="HBoxContainer" parent="Background/MainContainer/ControlsList" unique_id=1579669801]
+layout_mode = 2
+alignment = 1
+
+[node name="Key" type="Label" parent="Background/MainContainer/ControlsList/MoveRow" unique_id=123154820]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "W A S D"
+horizontal_alignment = 2
+
+[node name="Action" type="Label" parent="Background/MainContainer/ControlsList/MoveRow" unique_id=7860633]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " MOVE"
+
+[node name="LookRow" type="HBoxContainer" parent="Background/MainContainer/ControlsList" unique_id=1918191102]
+layout_mode = 2
+alignment = 1
+
+[node name="Key" type="Label" parent="Background/MainContainer/ControlsList/LookRow" unique_id=1083552285]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "MOUSE"
+horizontal_alignment = 2
+
+[node name="Action" type="Label" parent="Background/MainContainer/ControlsList/LookRow" unique_id=1580047683]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " LOOK AROUND"
+
+[node name="SprintRow" type="HBoxContainer" parent="Background/MainContainer/ControlsList" unique_id=1606716498]
+layout_mode = 2
+alignment = 1
+
+[node name="Key" type="Label" parent="Background/MainContainer/ControlsList/SprintRow" unique_id=2103904653]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SHIFT"
+horizontal_alignment = 2
+
+[node name="Action" type="Label" parent="Background/MainContainer/ControlsList/SprintRow" unique_id=736477737]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " SPRINT"
+
+[node name="CrouchRow" type="HBoxContainer" parent="Background/MainContainer/ControlsList" unique_id=1180274090]
+layout_mode = 2
+alignment = 1
+
+[node name="Key" type="Label" parent="Background/MainContainer/ControlsList/CrouchRow" unique_id=1965965393]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "CTRL"
+horizontal_alignment = 2
+
+[node name="Action" type="Label" parent="Background/MainContainer/ControlsList/CrouchRow" unique_id=1722548138]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " CROUCH"
+
+[node name="InteractRow" type="HBoxContainer" parent="Background/MainContainer/ControlsList" unique_id=861358862]
+layout_mode = 2
+alignment = 1
+
+[node name="Key" type="Label" parent="Background/MainContainer/ControlsList/InteractRow" unique_id=972723935]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "E"
+horizontal_alignment = 2
+
+[node name="Action" type="Label" parent="Background/MainContainer/ControlsList/InteractRow" unique_id=1040790884]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " INTERACT / PICKUP"
+
+[node name="StartButton" type="Button" parent="Background/MainContainer" unique_id=1906549255]
+custom_minimum_size = Vector2(240, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="Background/MainContainer" unique_id=76252930]
+custom_minimum_size = Vector2(240, 45)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Quit Game"

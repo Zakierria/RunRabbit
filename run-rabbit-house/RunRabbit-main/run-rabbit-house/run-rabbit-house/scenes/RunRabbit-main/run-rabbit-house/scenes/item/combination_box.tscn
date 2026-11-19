@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c42gutijj4a3h"]
+
+[ext_resource type="Script" uid="uid://dxbfmmspq30y0" path="res://scripts/combination_box.gd" id="1_y5vb3"]
+[ext_resource type="Texture2D" uid="uid://cgbr4bux4bkex" path="res://trenchbroom/textures/house/Concrete044C_1K-PNG_Color.png" id="2_6vr01"]
+[ext_resource type="PackedScene" uid="uid://c43g2tewyxnth" path="res://scenes/item/key.tscn" id="2_lh3a8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hd1at"]
+albedo_texture = ExtResource("2_6vr01")
+
+[sub_resource type="BoxMesh" id="BoxMesh_6vr01"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hd1at"]
+size = Vector3(0.7548828, 0.42764282, 0.5566406)
+
+[node name="combinationBox" type="StaticBody3D" unique_id=1300666897]
+collision_layer = 2
+script = ExtResource("1_y5vb3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=881034049]
+transform = Transform3D(0.6998548, 0, 0.010183292, 0, 0.4, 0, -0.01425661, 0, 0.4998963, -0.024770379, 0, 0)
+material_override = SubResource("StandardMaterial3D_hd1at")
+mesh = SubResource("BoxMesh_6vr01")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1101348186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0014648438, 0.0034332275, -0.0107421875)
+shape = SubResource("BoxShape3D_hd1at")
+
+[node name="HiddenKey" parent="." unique_id=665477445 instance=ExtResource("2_lh3a8")]
+transform = Transform3D(-0.064866185, -0.69570804, 0.042222243, 0, 0.042404704, 0.6987145, -0.69698817, 0.06474706, -0.0039294735, 0.3244542, 0, 0)
+
+[node name="PuzzleUI" type="CanvasLayer" parent="." unique_id=1807190887]
+
+[node name="PanelContainer" type="PanelContainer" parent="PuzzleUI" unique_id=1894354414]
+custom_minimum_size = Vector2(350, 250)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -64.0
+offset_right = 34.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PuzzleUI/PanelContainer" unique_id=586282297]
+layout_mode = 2
+
+[node name="CodeInput" type="LineEdit" parent="PuzzleUI/PanelContainer/VBoxContainer" unique_id=298506999]
+layout_mode = 2
+text = "413"
+alignment = 1
+max_length = 3
+
+[node name="ResultLabel" type="Label" parent="PuzzleUI/PanelContainer/VBoxContainer" unique_id=237377260]
+layout_mode = 2
+
+[node name="UnlockButton" type="Button" parent="PuzzleUI/PanelContainer/VBoxContainer" unique_id=1206695079]
+layout_mode = 2
+text = "Unlock"
+
+[node name="CloseButton" type="Button" parent="PuzzleUI/PanelContainer/VBoxContainer" unique_id=180724007]
+layout_mode = 2
+text = "Close"

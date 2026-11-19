@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://33uqkvyoocpl"]
+
+[ext_resource type="PackedScene" uid="uid://dnnxb8mpcs6cy" path="res://levels/trenchbroom_prototype.tscn" id="1_5gidf"]
+[ext_resource type="PackedScene" uid="uid://bwgswl6q32yrq" path="res://player.tscn" id="2_ymem3"]
+
+[sub_resource type="Environment" id="Environment_5gidf"]
+
+[node name="HouseTest" type="Node3D" unique_id=621679954]
+
+[node name="TrenchbroomPrototype" parent="." unique_id=1777453305 instance=ExtResource("1_5gidf")]
+
+[node name="player" parent="." unique_id=99303024 instance=ExtResource("2_ymem3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.189634, 2.5132298, 13.797231)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=757599655]
+environment = SubResource("Environment_5gidf")

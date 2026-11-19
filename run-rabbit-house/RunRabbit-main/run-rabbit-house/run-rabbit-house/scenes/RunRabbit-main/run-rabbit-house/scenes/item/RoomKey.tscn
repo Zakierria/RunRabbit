@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bd3wtyjt4bwed"]
+
+[ext_resource type="Script" uid="uid://uhue6py4764y" path="res://scripts/pickup_item.gd" id="1_3pyie"]
+[ext_resource type="PackedScene" uid="uid://2p4gdcf2upy" path="res://scenes/item/antique key 3d model (2).glb" id="2_qofs0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_43tf2"]
+size = Vector3(0.3226242, 0.9294586, 0.25146484)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5lilg"]
+size = Vector3(0.36206055, 0.99142456, 0.33380842)
+
+[node name="room_key" type="StaticBody3D" unique_id=665477445]
+script = ExtResource("1_3pyie")
+item_id = "room_key"
+item_display_name = "Room Key"
+
+[node name="antique key 3d model (2)" parent="." unique_id=1168687192 instance=ExtResource("2_qofs0")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=176432734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0010429919, 0.53050995, 0.08072966)
+shape = SubResource("BoxShape3D_43tf2")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=219577330]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=793136476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000418365, 0.503952, 0.04793322)
+shape = SubResource("BoxShape3D_5lilg")

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bjgtksys1d7o7"]
+
+[ext_resource type="Script" uid="uid://ddgmnernyfade" path="res://enemy.gd" id="1_md0e3"]
+[ext_resource type="PackedScene" uid="uid://dt4wm284xdpdq" path="res://models/old_man/Casual Style - Old Man.gltf" id="2_4ra3w"]
+[ext_resource type="AudioStream" uid="uid://dkgbdu7ghjjsi" path="res://sounds/footstep.wav" id="3_step"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5uy6h"]
+radius = 0.25
+height = 1.8
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1182376766]
+collision_mask = 3
+floor_max_angle = 0.872665
+floor_snap_length = 0.5
+script = ExtResource("1_md0e3")
+
+[node name="Model" parent="." unique_id=1976707796 instance=ExtResource("2_4ra3w")]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=829246679]
+path_desired_distance = 0.2
+target_desired_distance = 0.6
+radius = 0.2
+height = 1.8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1070852537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_5uy6h")
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="." unique_id=1964339612]
+stream = ExtResource("3_step")
+unit_size = 4.0
+max_distance = 25.0

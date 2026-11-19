@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://canshurtghkco"]
+
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_l2arl"]
+
+[node name="WinScreen" type="Control" unique_id=2110168419]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l2arl")
+game_scene = "uid://33uqkvyoocpl"
+main_menu_scene = "uid://xiuq6kudsete"
+
+[node name="Background" type="ColorRect" parent="." unique_id=1598887397]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -324.0
+offset_right = 575.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.26666668)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=975575648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1967921292]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=475633868]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45371473, 0.061044216, 0.10316373, 1)
+theme_override_font_sizes/font_size = 50
+text = "YOU ESCAPED!"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1615815371]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45371473, 0.061044216, 0.10316373, 1)
+text = "You made it out alive!"
+horizontal_alignment = 1
+
+[node name="PlayAgainButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1815909568]
+layout_mode = 2
+text = "Play Again"
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=178137088]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1900725148]
+layout_mode = 2
+text = "Quit"

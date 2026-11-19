@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://33uqkvyoocpl"]
+
+[ext_resource type="PackedScene" uid="uid://c276bxty54kk8" path="res://levels/trenchbroom_house.tscn" id="2_5gidf"]
+[ext_resource type="PackedScene" uid="uid://bwgswl6q32yrq" path="res://scenes/player.tscn" id="2_ymem3"]
+
+[sub_resource type="Environment" id="Environment_uqahh"]
+background_color = Color(0.2931621, 0.32590145, 0.4020817, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.39607844, 0.4392157, 0.5019608, 1)
+ambient_light_energy = 0.15
+
+[node name="HouseTest" type="Node3D" unique_id=621679954]
+
+[node name="player" parent="." unique_id=99303024 instance=ExtResource("2_ymem3")]
+transform = Transform3D(0.33612558, 0, 0.94181716, 0, 1, 0, -0.94181716, 0, 0.33612558, 10.578065, 6.511425, 12.604448)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=757599655]
+environment = SubResource("Environment_uqahh")
+
+[node name="TrenchbroomPrototype" parent="." unique_id=55390296 instance=ExtResource("2_5gidf")]
